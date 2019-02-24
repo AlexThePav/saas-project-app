@@ -10,6 +10,7 @@ gem 'rails', '~> 5.2.2'
 gem 'puma', '~> 3.11'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
+# gem 'acts_as_tenant'
 gem 'milia'
 gem 'devise'
 # Use Uglifier as compressor for JavaScript assets
