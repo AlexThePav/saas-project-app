@@ -49,6 +49,13 @@
         <div class="navbar-collapse collapse navbar-responsive-collapse">
           <ul class="nav navbar-nav col-md-8 inline">
             <li><a class="navbar-brand" href="#">SaasProjectApp</a></li>
+            <% if current_user %>
+                <li>
+                    <%= link_to "<i class='glyphicon glyphicon-users></i> Add Members".html_safe, 
+                                new_member_path,
+                                class: 'navbar-link btn btn-primary' %>
+                </li>
+            <% end %>
           </ul>
           <ul class="nav navbar-right col-md-4 inline">
             <% if !current_user %>
