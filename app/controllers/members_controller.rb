@@ -13,11 +13,11 @@ class MembersController < ApplicationController
 
     # ok to create user, member
     if @user.save_and_invite_member() && @user.create_member( member_params )
-      flash[:notice] = "New member added and invitation email sent to #{@user.email}."
+      flash[:notice]    = "New member added and invitation email sent to #{@user.email}."
       redirect_to root_path
     else
-      flash[:error] = "errors occurred!"
-      @member = Member.new( member_params ) # only used if need to revisit form
+      flash[:error]     = "errors occurred!"
+      @member           = Member.new( member_params ) # only used if need to revisit form
       render :new
     end
 
